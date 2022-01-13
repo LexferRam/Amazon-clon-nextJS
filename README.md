@@ -1,28 +1,92 @@
-# Installation Steps
+# Icons 
 
+https://heroicons.com/
+sudo yarn add @heroicons/react
 
+## Nextjs Image
 
-## Using npm
+import Image from "next/image"
 
-Run commands
+```javascript 
+ <Image
+    src="https://links.papareact.com/f90"
+    width={150}
+    height={40}
+    objectFit='contain'
+    className="cursor-pointer"
+/>
+```
 
-1) ```npm install```
+ * Agregar configuracion en next.config.js:
+  
+```javascript
+module.exports = {
+    images: {
+        domains: ['links.papareact.com', 'fakestoreapi.com']
+    }
+}
+```
 
+## Tailwind CSS
 
-2) ```npm run dev```
+* Instalar:
 
+```json
+      "@heroicons/react": "^1.0.5",
+    "@reduxjs/toolkit": "1.5.0",
+```
 
-## Or using yarn
+ * Agregar configuracion en tailwind.config.js:
+  
+```javascript
+module.exports = {
+  mode: "jit",
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      colors: {
+        amazon_blue: {
+          light: "#232F3E",
+          DEFAULT: "#131921",
+        },
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/line-clamp")],
+};
 
-Run commands 
+* Agregar en el global.css 
+  
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* inyectar estilos perzonalizados */
+@layer components{
+    ...
+}
+```
 
-1) ```npm install --global yarn```
+**Agregar extension de VS code**: Tailwind CSS IntelliSense
 
-2) ```yarn install```
+## CAROUSEL
 
-3) ```yarn run dev```
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+react-responsive-carousel  ==> npm i react-responsive-carousel
 
+# API para los productos
 
-### If you see the window below then you are set to build AMAZON 2.0!
+<https://fakestoreapi.com/>
 
-![Template Screenshot](TemplateScreenshot.jpg?raw=true "Template Screenshot")
+## CURRENCY
+
+yarn add react-currency-formatter
+import Currency from "react-currency-formatter"
