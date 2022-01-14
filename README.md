@@ -90,3 +90,19 @@ react-responsive-carousel  ==> npm i react-responsive-carousel
 
 yarn add react-currency-formatter
 import Currency from "react-currency-formatter"
+
+
+## Configurancion de Firebase y Google cloud console(para autenticar con google)
+
+* crear nuevo proyecto en firebase 
+* Seleccionar tuerca(configuracion) y seleccionar "Configuracion del proyecto"
+* En la seccion de "Tus Apps" seleccionar el icono '</>'
+* Registrar el nombre de la app y seleccionar 'registrar' y luego 'Ir a la consola'
+* En la seccion de 'Aps' en 'Configuración del SDK' seleccionar el radio botton 'Configuracion' y copiar el obj de conf de firebase en un archivo en la del proyecto con el nombre 'firebase.js'
+* Ir al menu lateral izq y seleccionar "authentication" y luego comenzar
+* En 'Proveedores adicionales' seleccionar 'Google' y luego habilitar el proveedor en el switch, agregar email y seleccionar guardar.
+* seleccionar de nuevo el proveedor activado(Google) y en 'configuraciondel SDK web' hacer hover en el '?' y seleccionar 'Consola de API de Google'
+* seleccionar el ID generado por firebase en la opcion 'ID de clientes OAuth 2.0'(de aqui tomar 'ID de cliente' y 'Secreto del cliente' los cuales  se deben agregar como variables de entorno en el proyecto)
+* En 'Orígenes autorizados de JavaScript' agregar 'http://localhost:3000'
+* En 'URI de redireccionamiento autorizados' agregar 'http://localhost:3000/api/auth/callback/google'
+  
