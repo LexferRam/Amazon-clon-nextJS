@@ -106,3 +106,55 @@ import Currency from "react-currency-formatter"
 * En 'Orígenes autorizados de JavaScript' agregar 'http://localhost:3000'
 * En 'URI de redireccionamiento autorizados' agregar 'http://localhost:3000/api/auth/callback/google'
   
+
+## Configuracion de Redux con Redux toolkit
+
+* Instalar lo siguiente:
+
+```npm 
+yarn add @reduxjs/toolkit
+yarn add react-redux
+```
+
+* Crear una carpeta app y adentro un archivo store.js
+
+```javascript
+import { configureStore } from "@reduxjs/toolkit";
+import basketReducer from "../slices/basketSlice";
+
+export const store = configureStore({
+  reducer: {
+    basket: basketReducer,
+  },
+});
+
+```
+
+* Crear una carpeta llamada 'slices' donde iran todos los estados reducers y acciones, ejemplo:
+  
+```javascript
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  items: [],
+};
+
+export const basketSlice = createSlice({
+  name: "basket",
+  initialState,
+  reducers: {
+    addToBasket: (state, action) => {},
+    removeFromBasket: (state, action) => {},
+  },
+});
+
+export const { addToBasket, removeFromBasket } = basketSlice.actions;
+
+// Selectors - This is how we pull information from the Global store slice
+export const selectItems = (state) => state.basket.items;
+
+export default basketSlice.reducer;
+
+```
+
+1:15:41
