@@ -169,3 +169,14 @@ export default basketSlice.reducer;
 * Add SECRET="MY_STRONG_SECRET" to your .env
 * Replace MY_STRONG_SECRET with a strong secret generate by a tool like https://generate-secret.vercel.app/32
 * Add secret: process.env.SECRET, at the same level as the providers array to pages/api/auth/[...nextauth].js
+
+## Agregando pagos con stripe
+
+* Agregar las dependencias.
+
+```npm 
+npm install --save stripe @stripe/stripe-js next
+```
+
+* usuario de strapi: lexferramirez@gmail.com pw:Lfrp58942022*
+
