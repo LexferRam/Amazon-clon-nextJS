@@ -180,3 +180,34 @@ npm install --save stripe @stripe/stripe-js next
 
 * usuario de strapi: lexferramirez@gmail.com pw:Lfrp58942022*
 
+
+## Instalcion de strapi CLI 
+
+* descargar zip de stripe cli y descomprimirlo
+* abrir una terminal en la carpeta descomprimida y ejecutar:
+  
+```cmd
+sudo mv stripe /usr/local/bin
+```
+
+* hacer login con: ./stripe login
+* ejecutar por terminal en la ruta del proyecto: stripe listen --forward-to localhost:3000/api/webhook
+* copiar el secret que devuelve el comando anterior(el secret cambia cada vez que que se cierre el terminal) y agregarlo como variables de entorno STRIPE_SIGNING_SECRET
+* crear el webhook ==> **webhook:** son eventos que desencadenan acciones.
+  
+## Pasos para generar permissions.js de firebase 
+
+* ir a la consola de firebase del proyecto 
+* selieccionar en la tuerca la opcion "configuracion del proyecto" 
+* seleccionar el tab "cuentas de servicios" 
+* presionar "Generar nueva clave privada"  
+* y el archivo que se genera y descarga copiarlo en la raiz del proyecto
+
+
+## Pasos para conectar con firestore  
+
+* entrar a la consola de firebase y seleccionar el proyecto 
+* seleccionar "Firestore Database" 
+* seleccionar "crear base de datos" 
+* seleccionar "comenzar en modo de prueba" 
+* seleccionar "siguiente" y "habilitar"

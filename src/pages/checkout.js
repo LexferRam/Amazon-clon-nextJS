@@ -16,6 +16,7 @@ const checkout = () => {
     const items = useSelector(selectItems)
     const total = useSelector(selectTotal)
     const { data: session } = useSession()
+
     /*(3)*/
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
@@ -80,7 +81,8 @@ const checkout = () => {
                             </h2>
                             <button
                                 role='link'
-                                /*(1)*/ onClick={createCheckoutSession}
+                                /*(1)*/
+                                onClick={createCheckoutSession}
                                 disabled={!session}
                                 className={`button mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'}`}>
                                 {!session ? "Sign in to checkout" : "Proceed to Checkout"}
