@@ -157,4 +157,9 @@ export default basketSlice.reducer;
 
 ```
 
-1:15:41
+## Configurar variables de entorno en vercel
+
+* Seleccionar el proyecto en vercel y entrar en settings 
+* Seleccionar "environment variables"
+* Anadir variables de .env
+* Ir a deployment, seleccionar los 3 puntos y seleccionar redeploy
