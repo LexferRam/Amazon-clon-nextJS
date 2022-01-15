@@ -163,3 +163,9 @@ export default basketSlice.reducer;
 * Seleccionar "environment variables"
 * Anadir variables de .env
 * Ir a deployment, seleccionar los 3 puntos y seleccionar redeploy
+
+## Cuando se despliega en Produccion se debn seguir los siguientes pasos
+
+* Add SECRET="MY_STRONG_SECRET" to your .env
+* Replace MY_STRONG_SECRET with a strong secret generate by a tool like https://generate-secret.vercel.app/32
+* Add secret: process.env.SECRET, at the same level as the providers array to pages/api/auth/[...nextauth].js
