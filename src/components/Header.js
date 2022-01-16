@@ -39,7 +39,7 @@ const Header = () => {
                         <p className="hover:underline">{session ? `Hello, ${session.user.name}` : 'Sign In'}</p>
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
-                    <div className="cursor-pointer link">
+                    <div onClick={() => router.push('/orders')} className="cursor-pointer link">
                         <p>Return</p>
                         <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>

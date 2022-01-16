@@ -178,8 +178,6 @@ export default basketSlice.reducer;
 npm install --save stripe @stripe/stripe-js next
 ```
 
-* usuario de strapi: lexferramirez@gmail.com pw:Lfrp58942022*
-
 
 ## Instalcion de strapi CLI 
 
